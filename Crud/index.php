@@ -19,10 +19,13 @@ $siswa = query( "SELECT * FROM tb_siswa");
 </head>
 <body>
     <h1>List of Students</h1>
+    <a href="tambah.php">tambah data siswa</a>
+    <br>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
-            <th>Pict</th>
+            <th>aksi</th>
+            <th>pict</th>
             <th>Name</th>
             <th>Class</th>
             <th>Email</th>
@@ -34,6 +37,11 @@ $siswa = query( "SELECT * FROM tb_siswa");
 
             <tr>
                 <td><?= $i;?></td>
+                <td>
+                <a href="">ubah</a>
+                <a href="">hapus</a>
+
+
                 <td><img src="img/<?= $row["gambar_siswa"]?>"width="50"></td>
                 <td><?= $row["nama_siswa"]?></td>
                 <td><?= $row["kelas_siswa"]?></td>

@@ -4,7 +4,7 @@
 $db = mysqli_connect("localhost", "root", "", "db_phpdasar");
 
 //ambil data dr table
-$result = mysqli_query($db, "SELECT * FROM tb_bukucerita");
+$result = mysqli_query($db, "SELECT * FROM tb_siswa");
 // var_dump($result);
 
 //ambil data (fetch) mahasiswa
@@ -28,13 +28,15 @@ $result = mysqli_query($db, "SELECT * FROM tb_bukucerita");
     <title>Document</title>
 </head>
 <body>
-    <h1>Buku Cerita</h1>
+    <h1>List of Students</h1>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>
-            <th>judul cerita</th>
-            <th>penulis cerita</th>
-            <th>gambar cerita</th>
+            <th>Pict</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Email</th>
+            <th>Nim</th>
         </tr>
 
         <?php $i = 1;?>
@@ -42,9 +44,11 @@ $result = mysqli_query($db, "SELECT * FROM tb_bukucerita");
 
             <tr>
                 <td><?= $i;?></td>
-                <td><img src="cerita/<?= $row["gambar_cerita"]?>"width="50"></td>
-                <td><?= $row["judul_cerita"]?></td>
-                <td><?= $row["penulis_cerita"]?></td>
+                <td><img src="img/<?= $row["gambar_siswa"]?>"width="50"></td>
+                <td><?= $row["nama_siswa"]?></td>
+                <td><?= $row["kelas_siswa"]?></td>
+                <td><?= $row["email_siswa"]?></td>
+                <td><?= $row["nim_siswa"]?></td>
             </tr>
             <?php $i++ ?>
         <?php endwhile; ?>
