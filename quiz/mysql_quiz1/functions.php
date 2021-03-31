@@ -31,4 +31,16 @@ function tambah($post){
 
     return mysqli_affected_rows($db);
 }
+
+
+function cari(keyword)
+{
+    $query = "SELECT * FROM tb_bukucerita WHERE
+    gambar_cerita LIKE '$keyword' OR
+    judul_cerita LIKE '$keyword' OR
+    penulis_cerita LIKE '$keyword'";
+
+    return get ($query);
+}
+
 ?>

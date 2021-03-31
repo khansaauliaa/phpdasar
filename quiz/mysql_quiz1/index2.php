@@ -15,6 +15,13 @@ $result = query("SELECT * FROM tb_bukucerita");
     <h1>Buku Cerita</h1>
     <a href="tambah.php">tambah data buku</a>
     <p>
+    <from action="" method="post">
+        <input type="text" name="keyword" size="40" autofocus 
+        placeholder="search here!" autocomplete="off">
+        <button type="submit" name="search">search </button>
+    
+    </from>
+
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <th>No</th>

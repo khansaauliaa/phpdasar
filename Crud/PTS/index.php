@@ -13,7 +13,7 @@ $siswa = get( "SELECT * FROM tb_film");
     <title>Document</title>
 </head>
 <body>
-    <h1>List of Students</h1>
+    <h1>List Film</h1>
     <a href="tambah.php">tambah data film</a>
     <br>
     <table border="1" cellpadding="10" cellspacing="0">
